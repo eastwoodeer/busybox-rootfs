@@ -4,6 +4,8 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:$PATH
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib
 export PATH LD_LIBRARY_PATH
 
+mkdir -p /sys /tmp /proc /mnt
+
 mount -a
 mkdir /dev/pts
 mount -t devpts devpts /dev/pts
