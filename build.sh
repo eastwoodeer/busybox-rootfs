@@ -2,6 +2,9 @@ export CROSS_COMPILE=~/Projects/toolchains/arm-gnu-toolchain-12.2.rel1-x86_64-aa
 BUSYBOX_VERSION=1.36.1
 
 wget -c https://busybox.net/downloads/busybox-${BUSYBOX_VERSION}.tar.bz2
+mkdir -p build
+mv busybox-${BUSYBOX_VERSION}.tar.bz2 build/
+cd build
 tar jxf busybox-${BUSYBOX_VERSION}.tar.bz2
 cd busybox-${BUSYBOX_VERSION}
 make menuconfig
